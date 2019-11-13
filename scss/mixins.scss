@@ -1,0 +1,70 @@
+
+//Laptop o Ipad Pro Horizontal
+$M1440: "screen and (max-width : 1440px) and (min-width: 1200)";
+//Tablet Horizontal
+$M1199: "screen and (max-width : 1199px) and (min-width: 992px)";
+//Tablet Vertical
+$M991: "screen and (max-width : 991px) and (min-width: 768px)";
+//Smartphone Horizontal
+$M767: "screen and (max-width: 767px) and (min-width: 576px)";
+//Smartphone Vertical
+$M575: "screen and (max-width: 575px)";
+
+/*
+@media #{$M1440}{
+
+}
+@media #{$M1199}{
+
+}
+@media #{$M991} {
+
+}
+@media #{$M767}{
+
+}
+@media #{$M575}{
+
+}
+*/
+
+@mixin shadow-0($shadow: none){
+  /*
+  @include shadow-0;
+  */
+  box-shadow: none !important;
+}
+
+@mixin center($horizontal: true, $vertical: true) {
+  /*
+  both
+    @include center;
+  horizontal
+    @include center(true, false);
+  vertical
+    @include center(false, true);
+  */
+  position: absolute;
+
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin m0p0($margin: 0, $padding: 0){
+  /*
+   @include m0p0;
+   */
+  margin: 0;
+  padding: 0;
+}

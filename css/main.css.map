@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAI,CCiEF,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC",
+"sources": ["../scss/main.scss","../scss/mixins.scss"],
+"names": [],
+"file": "main.css"
+}
